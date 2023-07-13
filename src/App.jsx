@@ -12,7 +12,8 @@ import { Home, Certificates, About, Contact, Projects } from "./pages";
 export const App = () => {
   return (
     <>
-      <Router>
+      <HashRouter>
+        {/* <Router> */}
         <main className="flex  w-screen h-screen ">
           <div className="w-2/12 overflow-hidden  bg-blue-950">
             <div className="w-full h-1/4 p-5  flex flex-col justify-between ">
@@ -24,20 +25,19 @@ export const App = () => {
           </div>
           {/* Informacion de opcion */}
           <div className="w-5/6 overflow-auto ">
-            <HashRouter>
-              <Routes>
-                <Route path="/app" element={<App />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/certificates" element={<Certificates />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/*" element={<Navigate to={"/home"} />} />
-              </Routes>
-            </HashRouter>
+            <Routes>
+              <Route path="/app" element={<App />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/certificates" element={<Certificates />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/*" element={<Navigate to={"/home"} />} />
+            </Routes>
           </div>
         </main>
-      </Router>
+        {/* </Router> */}
+      </HashRouter>
     </>
   );
 };
