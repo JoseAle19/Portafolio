@@ -1,16 +1,35 @@
 import React from "react";
-
+import { Profle } from "./components/Profle";
+import { Nav } from "./components/Nav";
+import { Routes, Route, BrowserRouter as Router, Navigate } from "react-router-dom";
+import { Home, Certificates, About, Contact, Projects } from "./pages";
 export const App = () => {
   return (
     <>
-      <main className="bg-red-600 w-screen h-screen">
-        <div className="w-3/12 h-screen bg-blue-50">
-          <div className="flex w-full h-1/4 bg-fuchsia-300">
-
+      <Router>
+        <main className="flex  w-screen h-screen ">
+          <div className="w-2/12 overflow-hidden  bg-blue-950">
+            <div className="w-full h-1/4 p-5  flex flex-col justify-between ">
+              <Profle />
+            </div>
+            <div className="w-3/4 h-3/4">
+              <Nav />
+            </div>
           </div>
-        </div>
-        <div className="w-9/12 bg-blue-500" ></div>
-      </main>
+          {/* Informacion de opcion */}
+          <div className="w-5/6 overflow-auto ">
+            <Routes>
+              <Route path="/app" element={<App />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/certificates" element={<Certificates />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/*" element={<Navigate to={'/home'}/>} />
+            </Routes>
+          </div>
+        </main>
+      </Router>
     </>
   );
 };
