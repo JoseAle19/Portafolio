@@ -18,7 +18,8 @@ export const App = () => {
           </div>
           {/* Informacion de opcion */}
           <div className="w-5/6 overflow-auto ">
-            <HashRouter>
+            <Routes>
+              <HashRouter>
               <Route path="/app" element={<App />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -26,7 +27,8 @@ export const App = () => {
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/*" element={<Navigate to={'/home'}/>} />
-            </HashRouter>
+              </HashRouter>
+            </Routes>
           </div>
         </main>
       </Router>
