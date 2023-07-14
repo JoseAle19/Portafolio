@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <>
       <HashRouter>
-        <div className="fixed top-0 right-0 left-0 py-3 shadow-md  xl:hidden md:hidden">
+        <div className="fixed overflow-hidden top-0 right-0  left-0 py-3 shadow-md  xl:hidden md:hidden">
           <button
             onClick={() => {
               setIsOpen(true);
@@ -27,11 +27,8 @@ export const App = () => {
             </svg>
           </button>
           {/* Fondo con algo opaco */}
-          <div
-            onClick={() => setIsOpen(false)}
-            className="fixed w-full overflow-auto "
-          >
-            <div className="h-screen">
+          <div className="fixed min-h-screen w-full overflow-auto ">
+            <div onClick={() => setIsOpen(false)} className="h-screen">
               <Routes>
                 <Route path="/app" element={<App />} />
                 <Route path="/home" element={<Home />} />
@@ -52,7 +49,7 @@ export const App = () => {
           <div
             className={`min-h-screen ${
               isOpen ? "inline" : "hidden"
-            } transition-all duration-300  w-2/3 fixed bg-blue-950  top-0 right-0 left-0`}
+            } transition-all duration-300  w-2/3 fixed bg-blue-950  top-0 right-0 left-0 overflow-hidden`}
           >
             <button
               onClick={() => {
