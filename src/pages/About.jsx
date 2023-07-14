@@ -27,8 +27,8 @@ export const About = () => {
           </span>
           <hr className="w-4/5 border-t-1 border-gray-500 my-1  " />
 
-          <div className=" w-4/5 ">
-            <div className="w-full flex items-center justify-between p-5 flex-wrap animate__animated animate__fadeInBottomLeft">
+          <div className=" w-4/5  ">
+            <div className="w-full flex items-center justify-center xl:justify-between p-5 flex-wrap animate__animated animate__fadeInBottomLeft">
               <Hability
                 image={images === null ? <p>Cargando....</p> : images[0].url}
                 name="Css 3"
@@ -54,7 +54,7 @@ export const About = () => {
                 name="Tailwind"
               />
             </div>
-            <div className="w-full flex items-center justify-between p-5 flex-wrap animate__animated animate__fadeInBottomRight ">
+            <div className="w-full flex items-center justify-center xl:justify-between md:justify-between p-5 flex-wrap animate__animated animate__fadeInBottomRight ">
               <Hability
                 image={images === null ? <p>Cargando....</p> : images[5].url}
                 name="Html 5"

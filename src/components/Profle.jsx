@@ -1,5 +1,5 @@
 import React from "react";
- 
+
 import { SocialLink } from "./SocialLink";
 import { hookGetImages } from "../hooks/hookGetImages";
 
@@ -8,20 +8,20 @@ export const Profle = () => {
   return (
     <>
       {/* nformacion */}
-      <div className="flex justify-start items-center gap-5 ">
+      <div className="my-3   flex flex-col  items-center  xl:flex-row  xl:flex xl:justify-start xl:items-center xl:gap-5 md:flex md:justify-start md:items-center md:gap-5 md:flex-row ">
         <img
-          className="rounded-full  w-20 h-20 object-cover"
+          className="rounded-full w-20 h-20 object-cover"
           src={
             "https://firebasestorage.googleapis.com/v0/b/crudpapeleria.appspot.com/o/img-tecnologies%2Frock.jpg?alt=media&token=1d436d9d-21f9-43e3-8186-5a9a8ca7035c"
           }
           alt=""
         />
-        <p className="text-ellipsis font-bold text-xl text-white ">
+        <p className="text-center font-bold text-xl text-white m-3">
           Jose alejandro
         </p>
       </div>
       {/* Contacto */}
-      <div className="flex w-full  justify-between ">
+      <div className=" flex justify-around w-full xl:flex xl:w-full  xl:justify-between  md:flex md:w-full  md:justify-between ">
         <SocialLink
           alt={"Linkedin"}
           svg={images === null ? <p>Cargando...</p> : images[9].url}
