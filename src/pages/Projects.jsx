@@ -1,7 +1,5 @@
 import { Project } from "../components/Project";
-import { hookGetImages } from "../hooks/hookGetImages";
 export const Projects = () => {
-  const { images } = hookGetImages("imgs");
   return (
     <>
       <div className="w-full  bg-gray-200 flex flex-col items-center ">
@@ -17,7 +15,7 @@ export const Projects = () => {
         </div>
         <div className="flex flex-wrap justify-center  ">
           <Project
-            img={images === null ? <p>Cargando</p> : images[2].url}
+            img={2}
             imgTitle={"Tienda de JoseStore"}
             urlDemoProject={"https://appcart.fly.dev/"}
             urlCodeProject={
@@ -26,13 +24,13 @@ export const Projects = () => {
           />
 
           <Project
-            img={images === null ? <p>Cargando</p> : images[4].url}
+            img={4}
             imgTitle={"Aplicacion de examen"}
             urlDemoProject={"https://bright-torte-0b0c68.netlify.app/"}
             urlCodeProject={"https://github.com/JoseAle19/quizapp.git"}
           />
           <Project
-            img={images === null ? <p>Cargando</p> : images[5].url}
+            img={5}
             imgTitle={"Rick and Morty"}
             urlDemoProject={"https://sprightly-treacle-5362c0.netlify.app/"}
             urlCodeProject={
@@ -40,12 +38,12 @@ export const Projects = () => {
             }
           />
           <Project
-            img={images === null ? <p>Cargando</p> : images[1].url}
+            img={1}
             imgTitle={"Coffe app"}
             urlDemoProject={"https://devjoses.netlify.app/"}
           />
           <Project
-            img={images === null ? <p>Cargando</p> : images[3].url}
+            img={3}
             imgTitle={"Generador de imagenes (OpenAI)"}
             urlDemoProject={
               "https://generador-de-imagenes-h622ik3r4-joseale19.vercel.app/?vercelToolbarCode=vqvuRycepbuVty7"
@@ -55,7 +53,7 @@ export const Projects = () => {
             }
           />
           <Project
-            img={images === null ? <p>Cargando</p> : images[0].url}
+            img={0}
             imgTitle={"Mini ecommerce de cafes"}
             urlDemoProject={"https://carlos170702.github.io/coffee/#/login"}
             urlCodeProject={"https://github.com/JoseAle19/RappiCoffee.git"}

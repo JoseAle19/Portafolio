@@ -3,6 +3,7 @@ import { Profle } from "./components/Profle";
 import { Nav } from "./components/Nav";
 import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import { Home, Certificates, About, Contact, Projects } from "./pages";
+import { NotFound } from "./pages/NotFound";
 export const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -36,7 +37,8 @@ export const App = () => {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/certificates" element={<Certificates />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/*" element={<Navigate to="/home" />} />
+                <Route path="/not-found" element={<NotFound />} />
+                <Route path="/*" element={<Navigate to={'/not-found'}/>} />
               </Routes>
             </div>
           </div>
@@ -95,7 +97,7 @@ export const App = () => {
               <Route path="/projects" element={<Projects />} />
               <Route path="/certificates" element={<Certificates />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/*" element={<Navigate to="/home" />} />
+              <Route path="/*" element={<NotFound  />} />
             </Routes>
           </div>
         </main>

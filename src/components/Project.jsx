@@ -2,9 +2,12 @@ import React from "react";
 import { useState } from "react";
 import GitSvg from "../../public/assets/svgs/git2.svg";
 import WebSvg from "../../public/assets/imges/web.png";
+import "animate.css";
+import { hookGetImages } from "../hooks/hookGetImages";
+// gif
 export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
   const [isStatic, setisStatic] = useState(false);
-
+  const { images, isLoading } = hookGetImages("imgs");
   return (
     <div
       onMouseEnter={() => {
@@ -17,9 +20,7 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
        rounded-tr-xl rounded-tl-xl m-5 drop-shadow-2xl  mb-32  `}
     >
       <div className="flex flex-col w-full items-center">
-        <span className="text-center text-xl p-2 font-bold">
-            {imgTitle}
-        </span>
+        <span className="text-center text-xl p-2 font-bold">{imgTitle}</span>
         <hr className="w-4/5 border-t-2 border-blue-950 my-2 " />
         <div className="flex w-full justify-around items-center ">
           <a
@@ -41,17 +42,24 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
         </div>
       </div>
       <div
-        className={`border-2 border-slate-400  w-64 h-48 transform absolute ${
+        className={`border-2  w-64 h-48 transform absolute ${
           isStatic ? " translate-y-32" : "-translate-y-0"
         } ${
           isStatic ? "transition duration-1000" : "transition duration-1000"
-        }  border-2 border-slate-400`}
+        }   `}
       >
-        <img
-          className="object-cover w-full h-full "
-          src={img}
-          alt={imgTitle}
-        />
+        {isLoading ? (
+          <div className="w-full h-full  bg-white flex justify-center items-center">
+            <p className="animate-spin border border-y-black w-20 h-20  rounded-full">
+            </p>
+          </div>
+        ) : (
+          <img
+            className="object-cover w-full h-full animate__animated animate__slideInUp"
+            src={images[img].url}
+            alt={imgTitle}
+          />
+        )}
       </div>
     </div>
   );

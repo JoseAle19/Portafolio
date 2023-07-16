@@ -13,8 +13,10 @@ export const hookGetImages = (path) => {
   const folderRef = ref(storage, folderPath);
 
   const [images, setImages] = useState(null);
+  const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     (async () => {
+      setIsLoading(true)
       listAll(folderRef)
         .then(async (res) => {
           const images = res.items.map(async (image) => {
@@ -25,6 +27,7 @@ export const hookGetImages = (path) => {
           });
           Promise.all(images)
             .then((urlsImages) => {
+              setIsLoading(false)
               setImages(urlsImages);
             })
             .catch((err) => {
@@ -38,5 +41,6 @@ export const hookGetImages = (path) => {
   }, []);
   return {
     images,
+    isLoading
   };
 };
