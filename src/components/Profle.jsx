@@ -2,7 +2,7 @@ import React from "react";
 
 import { SocialLink } from "./SocialLink";
 import { hookGetImages } from "../hooks/hookGetImages";
-
+import ImageProfile from "../../public/assets/imges/notfound.png";
 export const Profle = () => {
   const { images } = hookGetImages("svg");
   return (
@@ -10,10 +10,11 @@ export const Profle = () => {
       {/* nformacion */}
       <div className="my-3   flex flex-col  items-center  xl:flex-row  xl:flex xl:justify-start xl:items-center xl:gap-5 md:flex md:justify-start md:items-center md:gap-5 md:flex-row ">
         <img
-          className="rounded-full w-20 h-20 object-cover"
-          src={
-            "https://firebasestorage.googleapis.com/v0/b/crudpapeleria.appspot.com/o/img-tecnologies%2Frock.jpg?alt=media&token=1d436d9d-21f9-43e3-8186-5a9a8ca7035c"
-          }
+          className="rounded-full w-20 h-20 object-cover bg-white"
+          // src={
+          //   "https://firebasestorage.googleapis.com/v0/b/crudpapeleria.appspot.com/o/img-tecnologies%2Frock.jpg?alt=media&token=1d436d9d-21f9-43e3-8186-5a9a8ca7035c"
+          // }
+          src={ImageProfile}
           alt=""
         />
         <p className="text-center font-bold text-xl text-white m-3">

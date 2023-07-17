@@ -6,7 +6,7 @@ export const Projects = () => {
         <div className="mt-20 w-full flex items-center flex-col animate__animated animate__fadeIn">
           <span className="text-4xl font-bold text-center m-5">Proyectos</span>
           <hr className="w-4/5 border-t-1 border-gray-500 my-2" />
-          <span className=" w-3/4 text-center">
+          <span className=" w-3/4 font-bold">
             Estos son algunos de los proyectos que he desarrollado durante mi
             aprendizaje, utilizando herramientas y tecnologías nuevas para el
             desarrollo. Me emociona compartir mis conocimientos contigo y espero
