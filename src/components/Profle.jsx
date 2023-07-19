@@ -8,7 +8,7 @@ export const Profle = () => {
   return (
     <>
       {/* nformacion */}
-      <div className="my-3   flex flex-col  items-center  xl:flex-row  xl:flex xl:justify-start xl:items-center xl:gap-5 md:flex md:justify-start md:items-center md:gap-5 md:flex-row ">
+      <div className="my-3 flex flex-col  items-center  xl:flex-row  xl:flex xl:justify-start xl:items-center xl:gap-5 md:flex md:justify-start md:items-center md:gap-5 md:flex-row ">
         <img
           className="rounded-full w-20 h-20 object-cover bg-white"
           // src={

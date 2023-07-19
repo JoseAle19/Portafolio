@@ -7,7 +7,7 @@ export const Nav = () => {
   return (
     <>
       <div className="flex items-center  flex-col w-full h-full justify-between">
-        <div className="flex flex-col h-full justify-between w-full">
+        <div className="  flex flex-col h-full justify-between w-full">
           <LinkNav
             ulr={"/home"}
             svg={images === null ? <p>Cargando....</p> : images[8].url}

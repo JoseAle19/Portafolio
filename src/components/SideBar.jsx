@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { About, Certificates, Contact, Home, Projects } from "../pages";
 import { NotFound } from "../pages/NotFound";
@@ -6,7 +6,19 @@ import { Nav } from "./Nav";
 import { Profle } from "./Profle";
 
 export const SideBar = () => {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpen, setisOpen] = useState(true);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleMediaQuery = (e) => {
+      setisOpen(!e.matches);
+    };
+    mediaQuery.addEventListener("change", handleMediaQuery);
+    handleMediaQuery(mediaQuery);
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQuery);
+    };
+  }, []);
+
   return (
     <>
       <main className=" sm:relative xl:flex  md:flex w-screen h-screen">
@@ -17,7 +29,7 @@ export const SideBar = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8 m-2  hover:rotate-90 transition duration-300 z-10 absolute top-0 left-0"
+            className="w-8 h-8 m-2  scale hover:scale-125 transition duration-300 z-10 absolute top-0 left-0 xl:hidden md:hidden"
           >
             <path
               strokeLinecap="round"
@@ -27,10 +39,10 @@ export const SideBar = () => {
           </svg>
         </p>
         <div
-          className={`${!isOpen && "animate__animated animate__slideOutLeft " }
+          className={`${!isOpen && "animate__animated animate__slideOutLeft "}
           ${isOpen && " animate__animated animate__slideInLeft"} 
-          order-2 relative z-20  w-1/2   min-h-screen  sm:absolute sm:top-0 sm:left-0    
-        overflow-hidden bg-blue-950   xl:static xl:w-2/12 md:static md:w-2/6`}
+          order-2 relative z-20  w-full   min-h-screen 
+        overflow-hidden bg-blue-950   xl:static xl:w-2/12 md:static md:w-2/6 md:order-1`}
         >
           <p
             onClick={() => setisOpen(false)}
@@ -42,7 +54,7 @@ export const SideBar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-8 h-8 scale hover:scale-125 transition duration-300"
+              className="w-8 h-8 scale hover:scale-125 transition duration-300 xl:hidden md:hidden"
             >
               <path
                 strokeLinecap="round"
@@ -60,11 +72,11 @@ export const SideBar = () => {
         </div>
 
         {isOpen && (
-          <div className="h-full w-full  top-0 left-0 absolute  z-10  backdrop-blur-sm bg-white/50"></div>
+          <div className="h-full w-full  top-0 left-0 absolute  z-10  backdrop-blur-sm bg-white/50 xl:hidden md:hidden"></div>
         )}
         <div
           className={` order-1 absolute z-0  top-0 left-0  h-screen w-screen   
-        xl:static md:static xl:w-5/6 md:w-5/6 overflow-auto`}
+        xl:static md:static xl:w-5/6 md:w-5/6 md:order-2 overflow-auto`}
         >
           <Routes>
             {/* <Route path="/" element={<App />} /> */}
