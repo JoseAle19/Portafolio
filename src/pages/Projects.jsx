@@ -2,7 +2,7 @@ import { Project } from "../components/Project";
 export const Projects = () => {
   return (
     <>
-      <div className="w-full  bg-gray-200 flex flex-col items-center ">
+      <div className="w-full  flex flex-col items-center ">
         <div className="mt-20 w-full flex items-center flex-col animate__animated animate__fadeIn">
           <span className="text-4xl font-bold text-center m-5">Proyectos</span>
           <hr className="w-4/5 border-t-1 border-gray-500 my-2" />
