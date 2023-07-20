@@ -4,7 +4,6 @@ import { About, Certificates, Contact, Home, Projects } from "../pages";
 import { NotFound } from "../pages/NotFound";
 import { Nav } from "./Nav";
 import { Profle } from "./Profle";
-
 export const SideBar = () => {
   const [isOpen, setisOpen] = useState(true);
   useEffect(() => {
@@ -22,14 +21,23 @@ export const SideBar = () => {
   return (
     <>
       <main className=" sm:relative xl:flex  md:flex w-screen h-screen">
-        <p onClick={() => setisOpen(true)}>
+        <p
+          className={`${!isOpen && "animate__animated animate__slideInLeft "}
+          ${
+            isOpen && "animate__animated animate__slideOutLeft"
+          } bg-blue-950 w-full  absolute z-30 ${!isOpen && "h-12"}  `}
+          onClick={() => setisOpen(true)}
+        >
           <svg
+            color="white"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8 m-2  scale hover:scale-125 transition duration-300 z-10 absolute top-0 left-0 xl:hidden md:hidden"
+            className={`${
+              isOpen && "hidden"
+            } h-8 m-2  scale hover:scale-125 transition duration-300 z-10 absolute top-0 left-0 xl:hidden md:hidden`}
           >
             <path
               strokeLinecap="round"
@@ -41,8 +49,8 @@ export const SideBar = () => {
         <div
           className={`${!isOpen && "animate__animated animate__slideOutLeft "}
           ${isOpen && " animate__animated animate__slideInLeft"} 
-          order-2 relative z-20  w-full   min-h-screen 
-        overflow-hidden bg-blue-950   xl:static xl:w-2/12 md:static md:w-2/6 md:order-1`}
+          order-2 relative z-20 w-full  min-h-screen 
+        overflow-hidden bg-blue-950  xl:static xl:w-2/12 md:static md:w-2/6 md:order-1`}
         >
           <p
             onClick={() => setisOpen(false)}
@@ -54,7 +62,7 @@ export const SideBar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-8 h-8 scale hover:scale-125 transition duration-300 xl:hidden md:hidden"
+              className="w-8 h-8 scale mr-2 hover:scale-125 transition duration-300 xl:hidden md:hidden"
             >
               <path
                 strokeLinecap="round"
@@ -66,9 +74,12 @@ export const SideBar = () => {
           <div className="w-full h-1/4 p-5 flex flex-col justify-between">
             <Profle />
           </div>
-          <div className="w-3/4 h-3/4">
+          <div className="w-3/4 h-3/4 ">
             <Nav />
           </div>
+          <p className="text-center text-white text-sm  m-4">
+            © 2023 Jose alejandro. Todos los derechos reservados.
+          </p>
         </div>
 
         {isOpen && (
@@ -80,7 +91,7 @@ export const SideBar = () => {
         >
           <Routes>
             {/* <Route path="/" element={<App />} /> */}
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/certificates" element={<Certificates />} />

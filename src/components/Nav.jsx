@@ -9,7 +9,7 @@ export const Nav = () => {
       <div className="flex items-center  flex-col w-full h-full justify-between">
         <div className="  flex flex-col h-full justify-between w-full">
           <LinkNav
-            ulr={"/home"}
+            ulr={"/"}
             svg={images === null ? <p>Cargando....</p> : images[8].url}
             description={"Inicio"}
           />
@@ -34,9 +34,7 @@ export const Nav = () => {
             description={"Contacto"}
           />
         </div>
-        <p className="text-center text-white text-sm  m-2">
-          © 2023 Jose alejandro. Todos los derechos reservados.
-        </p>
+      
       </div>
     </>
   );

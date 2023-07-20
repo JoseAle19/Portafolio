@@ -5,7 +5,6 @@ import { SideBar } from "./components/SideBar";
 
 export const App = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return <>{
     pathname === '/404' ? <NotFound/> :<SideBar />} </>;
 };

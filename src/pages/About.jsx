@@ -1,6 +1,5 @@
 import "animate.css";
 import { Hability } from "../components/Hability";
-import { hookGetImages } from "../hooks/hookGetImages";
 
 // Importa las configuaciones
 export const About = () => {
@@ -18,9 +17,9 @@ export const About = () => {
             a equipos de trabajo y tiene habilidades autodidactas, siempre con
             ganas de aprender cosas nuevas y demostrar sus habilidades
           </span>
-        </div>
-        {/* Tecnologias */}
-        <div className="my-10 w-full flex items-center flex-col animate__animated animate__fadeIn">
+              </div>
+          {/* Tecnologias */}
+          <div className="my-10 w-full flex items-center flex-col animate__animated animate__fadeIn">
           <span className="text-4xl font-bold text-center m-5">
             Tecnologías
           </span>

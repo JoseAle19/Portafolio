@@ -39,7 +39,6 @@ export const NotFound = () => {
       <div className="w-screen h-screen flex overflow-hidden items-center justify-center bg-black   ">
         {[...Array(30)].map((_, index) => {
           const position = generateRandomPosition();
-          console.log(position.sizeDots);
           return (
             <span
               key={index}
@@ -74,20 +73,26 @@ export const NotFound = () => {
             alt="Imagen de astronauta"
           />
           <div className="w-full h-full flex flex-col items-center justify-center md:flex md:flex-col md:justify-center md:items-center ">
-            <p className="text-3xl text-orange-400  xl:text-2xl font-extrabold md:text-center md:text-3xl">
+            <p className=" text-center text-3xl text-orange-400  xl:text-2xl font-extrabold md:text-center md:text-3xl">
               Tenemos un problema
             </p>
             <span className="text-white text-4xl  xl:text-9xl font-extrabold md:text-center  md:text-4xl">
               404
             </span>
-            <p className="text-3xl text-orange-400 xl:text-3xl font-extrabold md:text-center md:text-3xl">
+            <p className="text-3xl text-center text-orange-400 xl:text-3xl font-extrabold md:text-center md:text-3xl">
               Pagina no encontrada
             </p>
           </div>
-        </div>
-        <Link  to={'/about'}>
-            <span className="text-white" >Regresar</span>
+          <Link to={"/"}>
+            <button
+              className="text-white text-center font-bold rounded-full w-32 border-2 border-white p-2 scale 
+          hover:scale-125 transition duration-300
+          "
+            >
+              Regresar
+            </button>
           </Link>
+        </div>
       </div>
     </>
   );
