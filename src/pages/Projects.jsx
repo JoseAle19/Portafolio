@@ -57,14 +57,16 @@ export const Projects = () => {
             imgTitle={"Mini ecommerce de cafes"}
             urlDemoProject={"https://carlos170702.github.io/coffee/#/login"}
             urlCodeProject={"https://github.com/JoseAle19/RappiCoffee.git"}
-          />
+            />
 
-          {/* <Project
-            img={Generator}
+          <Project
+            img={6}
             imgTit
-            imgTitle={"Generador de imagenes (OpenAI)"}
-            urlDemoProject={"https://devjoses.netlify.app/"}
+            imgTitle={"Tic Tac Toe"}
+            urlDemoProject={"https://cool-druid-619976.netlify.app/"}
+            urlCodeProject={"https://github.com/JoseAle19/Tic-Tac-Toe.git"}
           />
+          {/*
           <Project
             img={Generator}
             imgTit

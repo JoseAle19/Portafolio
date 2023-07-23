@@ -4,6 +4,7 @@ import { About, Certificates, Contact, Home, Projects } from "../pages";
 import { NotFound } from "../pages/NotFound";
 import { Nav } from "./Nav";
 import { Profle } from "./Profle";
+
 export const SideBar = () => {
   const [isOpen, setisOpen] = useState(true);
   useEffect(() => {
@@ -20,7 +21,7 @@ export const SideBar = () => {
 
   return (
     <>
-      <main className=" sm:relative xl:flex  md:flex w-screen h-screen">
+      <main className=" sm:relative xl:flex md:flex w-screen h-screen overflow-hidden" >
         <p
           className={`${!isOpen && "animate__animated animate__slideInLeft "}
           ${
@@ -71,10 +72,10 @@ export const SideBar = () => {
               />
             </svg>
           </p>
-          <div className="w-full h-1/4 p-5 flex flex-col justify-between">
+          <div className="w-full  h-1/4 p-5 flex flex-col justify-between">
             <Profle />
           </div>
-          <div className="w-3/4 h-3/4 ">
+          <div className="w-3/4  ">
             <Nav />
           </div>
           <p className="text-center text-white text-sm  m-4">

@@ -1,6 +1,5 @@
 import "animate.css";
 import { Hability } from "../components/Hability";
-
 // Importa las configuaciones
 export const About = () => {
   return (

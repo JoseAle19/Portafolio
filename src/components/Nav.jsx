@@ -16,7 +16,7 @@ export const Nav = () => {
           <LinkNav
             ulr={"/about"}
             svg={images === null ? <p>Cargando....</p> : images[0].url}
-            description={"Sobre mi"}
+            description={"Sobre mí"}
           />
           <LinkNav
             ulr={"/projects"}

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
+// import dotenv from "dotenv";
+// dotenv.config()
 const firebaseConfig = {
-  apiKey: "AIzaSyAEkIbhdd1bQKCHF5B590iWUXheiRvfcWU",
-  authDomain: "project-254876512081",
-  projectId: "crudpapeleria",
+  apiKey: import.meta.env.VITE_REACT_API_KEY,
+  authDomain: import.meta.env.VITE_REACT_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_REACT_PROJECT_ID,
 };
 export const hookGetImages = (path) => {
   initializeApp(firebaseConfig);
@@ -13,10 +15,10 @@ export const hookGetImages = (path) => {
   const folderRef = ref(storage, folderPath);
 
   const [images, setImages] = useState(null);
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     (async () => {
-      setIsLoading(true)
+      setIsLoading(true);
       listAll(folderRef)
         .then(async (res) => {
           const images = res.items.map(async (image) => {
@@ -27,11 +29,11 @@ export const hookGetImages = (path) => {
           });
           Promise.all(images)
             .then((urlsImages) => {
-              setIsLoading(false)
+              setIsLoading(false);
               setImages(urlsImages);
             })
             .catch((err) => {
-                console.log('Error al procesar las imagenes')
+              console.log("Error al procesar las imagenes");
             });
         })
         .catch((err) => {
@@ -41,6 +43,6 @@ export const hookGetImages = (path) => {
   }, []);
   return {
     images,
-    isLoading
+    isLoading,
   };
 };

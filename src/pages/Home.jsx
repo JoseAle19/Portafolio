@@ -1,6 +1,7 @@
 import React from "react";
 import Portada from "../../public/assets/imges/portada.jpg";
 import { Link } from "react-router-dom";
+
 export const Home = () => {
   return (
     <div className="relative  h-screen overflow-hidden">
@@ -16,12 +17,12 @@ export const Home = () => {
           Bienvenid@s
         </span>
         <p className="text-white text-4xl font-black text-center m-2">
-          Jose alejandro cruz perez
+        José Alejandro Cruz Pérez
         </p>
         <span className="text-3xl text-white font-semibold">Desarrollador junior</span>
         <Link to={"/about"}>
           <button className=" rounded-full border-2 border-indigo-950 p-2 w-32 m-2 text-white font-bold ">
-            Sobre mi
+            Sobre mí
           </button>
         </Link>
       </div>

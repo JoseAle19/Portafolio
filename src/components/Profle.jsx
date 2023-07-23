@@ -14,7 +14,7 @@ export const Profle = () => {
           // src={
           //   "https://firebasestorage.googleapis.com/v0/b/crudpapeleria.appspot.com/o/img-tecnologies%2Frock.jpg?alt=media&token=1d436d9d-21f9-43e3-8186-5a9a8ca7035c"
           // }
-          src={ImageProfile}
+          src={'https://cdn-icons-png.flaticon.com/512/4661/4661320.png'}
           alt=""
         />
         <p className="text-center font-bold text-xl text-white m-3">

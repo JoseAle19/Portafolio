@@ -17,11 +17,11 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
         setisStatic(false);
       }}
       className={`flex flex-wrap w-64 h-48 bg-white
-       rounded-tr-xl rounded-tl-xl m-5 drop-shadow-2xl  mb-32  `}
+       rounded-xl  m-5 drop-shadow-2xl  mb-32 border-2 border-blue-950/20`}
     >
       <div className="flex flex-col w-full items-center">
         <span className="text-center text-xl p-2 font-bold">{imgTitle}</span>
-        <hr className="w-4/5 border-t-2 border-blue-950 my-2 " />
+        <hr className="w-4/5 border-2 border-blue-950 my-2 " />
         <div className="flex w-full justify-around items-center ">
           <a
             className="text-center from-bold cursor-pointer flex gap-2 p-2 rounded-md bg-gray-200 scale hover:scale-125 transition duration-100"
@@ -42,7 +42,8 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
         </div>
       </div>
       <div
-        className={`border-2  w-64 h-48 transform absolute ${
+        className={`drop-shadow-2xl 
+         w-full h-full transform absolute   rounded-xl ${
           isStatic ? " translate-y-32" : "-translate-y-0"
         } ${
           isStatic ? "transition duration-1000" : "transition duration-1000"
@@ -55,7 +56,7 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
           </div>
         ) : (
           <img
-            className="object-cover w-full h-full animate__animated animate__slideInUp"
+            className=" rounded-xl object-cover w-full h-full animate__animated animate__slideInUp"
             src={images[img].url}
             alt={imgTitle}
           />
