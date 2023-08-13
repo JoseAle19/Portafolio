@@ -7,9 +7,12 @@ import { Profle } from "./Profle";
 
 export const SideBar = () => {
   const [isOpen, setisOpen] = useState(true);
+  const [isPc, setIsPc] = useState();
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
+
     const handleMediaQuery = (e) => {
+      setIsPc(e.matches);
       setisOpen(!e.matches);
     };
     mediaQuery.addEventListener("change", handleMediaQuery);
@@ -21,7 +24,7 @@ export const SideBar = () => {
 
   return (
     <>
-      <main className="w-8/12 sm:relative xl:flex md:flex  xl:w-screen md:w-screen  xl:h-screen overflow-hidden" >
+      <main className="w-8/12 sm:relative xl:flex md:flex  xl:w-screen md:w-screen  xl:h-screen overflow-hidden">
         <p
           className={`${!isOpen && "animate__animated animate__slideInLeft "}
           ${
@@ -76,7 +79,7 @@ export const SideBar = () => {
             <Profle />
           </div>
           <div className="w-3/4  ">
-            <Nav setIsOpen={setisOpen}/>
+            <Nav setIsOpen={isPc&&setisOpen} />
           </div>
           <p className="text-center text-white text-sm  m-4">
             © 2023 Jose alejandro. Todos los derechos reservados.
