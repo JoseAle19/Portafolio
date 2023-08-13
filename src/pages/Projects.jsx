@@ -66,13 +66,13 @@ export const Projects = () => {
             urlDemoProject={"https://cool-druid-619976.netlify.app/"}
             urlCodeProject={"https://github.com/JoseAle19/Tic-Tac-Toe.git"}
           />
-          {/*
-          <Project
-            img={Generator}
-            imgTit
-            imgTitle={"Generador de imagenes (OpenAI)"}
-            urlDemoProject={"https://devjoses.netlify.app/"}
-          /> */}
+            
+            <Project
+              img={4}
+              imgTit
+              imgTitle={"Peliculas debouncer"}
+              urlDemoProject={"https://spiffy-tartufo-40c1d8.netlify.app/"}
+            />
         </div>
         <div>Aplicaciones flutter</div>
       </div>

@@ -21,7 +21,7 @@ export const SideBar = () => {
 
   return (
     <>
-      <main className=" sm:relative xl:flex md:flex w-screen h-screen overflow-hidden" >
+      <main className="w-8/12 sm:relative xl:flex md:flex  xl:w-screen md:w-screen  xl:h-screen overflow-hidden" >
         <p
           className={`${!isOpen && "animate__animated animate__slideInLeft "}
           ${
@@ -76,7 +76,7 @@ export const SideBar = () => {
             <Profle />
           </div>
           <div className="w-3/4  ">
-            <Nav />
+            <Nav setIsOpen={setisOpen}/>
           </div>
           <p className="text-center text-white text-sm  m-4">
             © 2023 Jose alejandro. Todos los derechos reservados.
