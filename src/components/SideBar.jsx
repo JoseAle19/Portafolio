@@ -79,7 +79,15 @@ export const SideBar = () => {
             <Profle />
           </div>
           <div className="w-3/4  ">
-            <Nav setIsOpen={isPc&&setisOpen} />
+            <Nav
+              setIsOpen={
+                isPc
+                  ? setisOpen
+                  : () => {
+                      console.log("xd");
+                    }
+              }
+            />
           </div>
           <p className="text-center text-white text-sm  m-4">
             © 2023 Jose alejandro. Todos los derechos reservados.
