@@ -90,7 +90,7 @@ export const SideBar = () => {
             />
           </div>
           <p className="text-center text-white text-sm  m-4">
-            © 2023 Jose alejandro. Todos los derechos reservados.
+            © 2023 José Alejandro Cruz Pérez. Todos los derechos reservados.
           </p>
         </div>
 
@@ -102,7 +102,6 @@ export const SideBar = () => {
         xl:static md:static xl:w-5/6 md:w-5/6 md:order-2 overflow-auto`}
         >
           <Routes>
-            {/* <Route path="/" element={<App />} /> */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />

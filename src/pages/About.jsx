@@ -9,16 +9,18 @@ export const About = () => {
           <span className="text-4xl font-bold text-center m-5">Sobre Mí</span>
           <hr className="w-4/5 border-t-1 border-gray-500 my-1  " />
           <span className="w-3/4  font-bold ">
-            José Alejandro, un joven de 22 años de edad, cursando la carrera de
-            Ingeniería en Sistemas Computacionales en el Tecnológico de Comitán.
-            Una de las cosas que le apasiona es programar y encontrar soluciones
-            a los problemas en el desarrollo de software. Es capaz de adaptarse
-            a equipos de trabajo y tiene habilidades autodidactas, siempre con
-            ganas de aprender cosas nuevas y demostrar sus habilidades
+            ¡Hola! Soy José Alejandro, tengo 22 años y actualmente estoy
+            estudiando Ingeniería en Sistemas Computacionales en el Tecnológico
+            de Comitán. Una de mis mayores pasiones es la programación, disfruto
+            enfrentando desafíos y resolviendo problemas en el desarrollo de
+            software. Me considero adaptable en equipos de trabajo y poseo
+            habilidades autodidactas. Siempre estoy entusiasmado por aprender
+            nuevas cosas y ansioso por demostrar mis habilidades en el campo de
+            la informática.
           </span>
-              </div>
-          {/* Tecnologias */}
-          <div className="my-10 w-full flex items-center flex-col animate__animated animate__fadeIn">
+        </div>
+        {/* Tecnologias */}
+        <div className="my-10 w-full flex items-center flex-col animate__animated animate__fadeIn">
           <span className="text-4xl font-bold text-center m-5">
             Tecnologías
           </span>

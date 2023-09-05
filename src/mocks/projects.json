@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "img": "movieDebouncer.png?alt=media&token=e12e07b7-b4dc-4327-abb8-c381a2217221",
+      "imgTitle": "Películas debouncer",
+      "urlDemoProject": "https://spiffy-tartufo-40c1d8.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/MovieDb-clone"
+    },
+    {
+      "img": "tmdb.png?alt=media&token=7b2b15a1-c6ea-4792-a03e-7ed35919d6e4",
+      "imgTitle": "CodeFlicks",
+      "urlDemoProject": "https://devjose-movies.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/MovieDb-clone"
+    },
+    {
+      "img": "devjose.png?alt=media&token=2d8c50cb-de25-4186-a12c-fda51723657a",
+      "imgTitle": "Tienda de JoseStore",
+      "urlDemoProject": "https://appcart.fly.dev/",
+      "urlCodeProject": "https://github.com/JoseAle19/vanilla-shopping-cart-.git"
+    },
+    {
+      "img": "quizapp.jpeg?alt=media&token=f6dc03f6-7cd6-472d-9387-1af32d8d7911",
+      "imgTitle": "Aplicación de examen",
+      "urlDemoProject": "https://bright-torte-0b0c68.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/quizapp.git"
+    },
+    {
+      "img": "rick.png?alt=media&token=5f0777f5-5a9a-4c55-a6f7-ddfe2573cbe6",
+      "imgTitle": "Rick and Morty",
+      "urlDemoProject": "https://sprightly-treacle-5362c0.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/todo-rickAndMorty.git"
+    },
+    {
+      "img": "coffe.png?alt=media&token=37894fc9-2369-4847-94e7-cde191274d37",
+      "imgTitle": "Coffe app",
+      "urlDemoProject": "https://devjoses.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/RappiCoffee.git"
+    },
+    {
+      "img": "generator.png?alt=media&token=6e4fdaba-b2a1-42e0-a674-6d08e57785a7",
+      "imgTitle": "Generador de imágenes (OpenAI)",
+      "urlDemoProject": "https://generador-de-imagenes-h622ik3r4-joseale19.vercel.app/?vercelToolbarCode=vqvuRycepbuVty7",
+      "urlCodeProject": "https://github.com/JoseAle19/generador-de-imagenes.git"
+    },
+    {
+      "img": "cofe.png?alt=media&token=cacb4f0b-0631-453e-9ee4-c3af67cfca66",
+      "imgTitle": "Mini ecommerce de cafés",
+      "urlDemoProject": "https://carlos170702.github.io/coffee/#/login",
+      "urlCodeProject": "https://github.com/JoseAle19/RappiCoffee.git"
+    },
+    {
+      "img": "tic.png?alt=media&token=305594ef-494e-4537-b08e-57dae58f2e23",
+      "imgTitle": "Tic Tac Toe",
+      "urlDemoProject": "https://cool-druid-619976.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/Tic-Tac-Toe.git"
+    }
+  ]
+}

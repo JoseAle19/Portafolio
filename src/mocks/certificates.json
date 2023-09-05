@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "name": "Curso de node de cero a experto (udemy)",
+      "url": "certificado-node.jpg?alt=media&token=cfbdce6d-9c2e-4c6f-ad71-6956e74a9e6e"
+      
+    },
+    {
+      "name": "Jovenes emprendedores",
+      "url": "emprendedor2.jpeg?alt=media&token=bb68ae9a-c27e-455d-bfc0-e1ebc3430b04"
+    },
+    {
+      "name": "Proyecto JUIZZI",
+      "url": "juizzi.jpeg?alt=media&token=c1153688-f7f1-4968-b9c3-92c2f37cc65a"
+    }
+  ]
+}
