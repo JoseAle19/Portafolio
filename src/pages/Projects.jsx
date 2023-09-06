@@ -14,7 +14,7 @@ export const Projects = () => {
             que puedas evaluar mis habilidades y conocimientos.
           </span>
         </div>
-        <div className="flex flex-wrap justify-center  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4  ">
           {projects.map((project) => {
             return (
               <Project

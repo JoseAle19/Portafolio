@@ -1,5 +1,5 @@
-  import { hookGetImages } from "../hooks/hookGetImages";
-  import "animate.css";
+import { hookGetImages } from "../hooks/hookGetImages";
+import "animate.css";
 export const Hability = ({ image, name }) => {
   const { images, isLoading } = hookGetImages("img-tecnologies");
 
@@ -12,6 +12,7 @@ export const Hability = ({ image, name }) => {
           </div>
         ) : (
           <img
+            loading="lazy"
             className=" w-32 p-2 object-contain animate__animated animate__zoomIn"
             src={images[image].url}
             alt={`Logo ${name}`}

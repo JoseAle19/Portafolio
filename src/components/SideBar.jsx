@@ -7,13 +7,12 @@ import { Profle } from "./Profle";
 
 export const SideBar = () => {
   const [isOpen, setisOpen] = useState(true);
-  const [isPc, setIsPc] = useState();
+  const [isPc, setIsPc] = useState(false);
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 425px)");
 
     const handleMediaQuery = (e) => {
-      setIsPc(e.matches);
-      setisOpen(!e.matches);
+        setisOpen(!e.matches);
     };
     mediaQuery.addEventListener("change", handleMediaQuery);
     handleMediaQuery(mediaQuery);
@@ -24,7 +23,7 @@ export const SideBar = () => {
 
   return (
     <>
-      <main className="w-8/12 sm:relative xl:flex md:flex  xl:w-screen md:w-screen  xl:h-screen overflow-hidden">
+      <main className=" w-full sm:relative xl:flex md:flex  xl:w-screen md:w-screen  xl:h-screen overflow-hidden">
         <p
           className={`${!isOpen && "animate__animated animate__slideInLeft "}
           ${
@@ -53,7 +52,7 @@ export const SideBar = () => {
         <div
           className={`${!isOpen && "animate__animated animate__slideOutLeft "}
           ${isOpen && " animate__animated animate__slideInLeft"} 
-          order-2 relative z-20 w-full  min-h-screen 
+          order-2 relative z-20 w-[70%]  min-h-screen 
         overflow-hidden bg-blue-950  xl:static xl:w-2/12 md:static md:w-2/6 md:order-1`}
         >
           <p
@@ -84,12 +83,12 @@ export const SideBar = () => {
                 isPc
                   ? setisOpen
                   : () => {
-                      console.log("xd");
+                      return;
                     }
               }
             />
           </div>
-          <p className="text-center text-white text-sm  m-4">
+          <p className="hidden md:block xl:block  text-center text-white text-sm  m-4">
             © 2023 José Alejandro Cruz Pérez. Todos los derechos reservados.
           </p>
         </div>

@@ -9,18 +9,19 @@ export const Certificates = () => {
   };
   return (
     <>
-      <div className="w-full  flex flex-col items-center p-10">
+      <div className="w-full  flex flex-col items-center p-10 ">
         <p className="text-center text-3xl font-bold">Mis Certificados</p>
         <hr className="w-4/5 border-t-1 border-gray-500 my-2" />
         {data.map(({ url, name }) => {
           return (
             <div
               key={url}
-              className="mx-2  hover:scale-105 duration-300 flex flex-col w-[400px] md:w-auto xl:w-[700px] border-4
+              className="  hover:scale-105 duration-300 flex flex-col w-[300px] md:w-auto xl:w-[700px] border-4
                border-blue-950 mt-5 bg-blue-950 "
             >
               <div>
                 <img
+                loading="lazy"
                   onLoad={() => {
                     handleImageLoaded();
                   }}

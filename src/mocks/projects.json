@@ -19,6 +19,12 @@
       "urlCodeProject": "https://github.com/JoseAle19/vanilla-shopping-cart-.git"
     },
     {
+      "img": "tic.png?alt=media&token=305594ef-494e-4537-b08e-57dae58f2e23",
+      "imgTitle": "Tic Tac Toe",
+      "urlDemoProject": "https://cool-druid-619976.netlify.app/",
+      "urlCodeProject": "https://github.com/JoseAle19/Tic-Tac-Toe.git"
+    },
+    {
       "img": "quizapp.jpeg?alt=media&token=f6dc03f6-7cd6-472d-9387-1af32d8d7911",
       "imgTitle": "Aplicación de examen",
       "urlDemoProject": "https://bright-torte-0b0c68.netlify.app/",
@@ -47,12 +53,6 @@
       "imgTitle": "Mini ecommerce de cafés",
       "urlDemoProject": "https://carlos170702.github.io/coffee/#/login",
       "urlCodeProject": "https://github.com/JoseAle19/RappiCoffee.git"
-    },
-    {
-      "img": "tic.png?alt=media&token=305594ef-494e-4537-b08e-57dae58f2e23",
-      "imgTitle": "Tic Tac Toe",
-      "urlDemoProject": "https://cool-druid-619976.netlify.app/",
-      "urlCodeProject": "https://github.com/JoseAle19/Tic-Tac-Toe.git"
     }
   ]
 }

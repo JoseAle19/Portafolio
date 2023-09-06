@@ -29,7 +29,7 @@ export const About = () => {
           <div className="w-4/5 ">
             <div
               className="w-full flex items-center justify-center 
-              md:flex md:flex-wrap md:justify-around
+              md:grid md:grid-cols-3 md:justify-around
              xl:justify-between  flex-wrap animate__animated animate__fadeInBottomLeft"
             >
               <Hability image={0} name={"Css 3"} />
@@ -41,7 +41,7 @@ export const About = () => {
             </div>
             <div
               className="w-full flex items-center justify-center 
-             md:flex md:flex-wrap md:justify-around
+              md:grid md:grid-cols-3 md:justify-around
             xl:justify-between  flex-wrap animate__animated animate__fadeInBottomLeft"
             >
               <Hability image={5} name="Html 5" />

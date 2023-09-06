@@ -4,7 +4,7 @@ import GitSvg from "../../public/assets/svgs/git2.svg";
 import WebSvg from "../../public/assets/imges/web.png";
 import "animate.css";
 import { hookGetImages } from "../hooks/hookGetImages";
-import {  urlFirebasePath } from "../utils/constantes/constantes";
+import { urlFirebasePath } from "../utils/constantes/constantes";
 // gif
 export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
   const [imgLoaded, setimgLoaded] = useState(false);
@@ -54,19 +54,20 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
           isStatic ? "transition duration-1000" : "transition duration-1000"
         }   `}
       >
-        <img
-          className=" rounded-xl object-cover w-full h-full animate__animated animate__slideInUp"
-          src={urlFirebasePath('imgs') + img}
-          alt={imgTitle}
-          onLoad={() => {
-            handleImgLoaded();
-          }}
-        />
         {!imgLoaded && (
           <div className="w-full h-full  bg-white flex justify-center items-center">
             <p className="animate-spin border border-y-black w-20 h-20  rounded-full"></p>
           </div>
         )}
+        <img
+          loading="lazy"
+          className=" rounded-xl object-cover w-full h-full animate__animated animate__slideInUp"
+          src={urlFirebasePath("imgs") + img}
+          alt={imgTitle}
+          onLoad={() => {
+            handleImgLoaded();
+          }}
+        />
       </div>
     </div>
   );
