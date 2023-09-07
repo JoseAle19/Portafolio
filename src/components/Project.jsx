@@ -56,13 +56,13 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
           isStatic ? "transition duration-1000" : "transition duration-1000"
         }   `}
       >
-        <div className="flex justify-center bg-white">
+        {/* <div className="flex justify-center bg-white">
           <DiJavascript1 
           className="bg-yellow-400"
           size={30}  colorInterpolation="yellow" color="blac    k" />
           <DiHtml5  size={30} color="red" />
           <DiCss3  color="blue" size={30} />
-        </div>
+        </div> */}
         {!imgLoaded && (
           <div className="w-full h-full  bg-white flex justify-center items-center">
             <p className="animate-spin border border-y-black w-20 h-20  rounded-full"></p>
