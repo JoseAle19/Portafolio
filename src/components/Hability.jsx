@@ -12,8 +12,9 @@ export const Hability = ({ image, name }) => {
           </div>
         ) : (
           <img
+          
             loading="lazy"
-            className=" w-32 p-2 object-contain animate__animated animate__zoomIn"
+            className="animate-fadeIn w-32 p-2 object-contain animate__animated animate__zoomIn"
             src={images[image].url}
             alt={`Logo ${name}`}
           />

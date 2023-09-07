@@ -1,9 +1,7 @@
-import React from "react";
 import { LinkNav } from "./LinkNav";
-import { hookGetImages } from "../hooks/hookGetImages";
+import {AboutSvg, CertificateSvg, ContactSvg, HomeSvg, ProjectSvg  } from "../svgs/svgs";
 // React Router
 export const Nav = ({ setIsOpen }) => {
-  const { images } = hookGetImages("svg");
   return (
     <>
       <div className="flex items-center  flex-col w-full h-full justify-between">
@@ -11,33 +9,33 @@ export const Nav = ({ setIsOpen }) => {
           <LinkNav
             onClick={setIsOpen}
             ulr={"/"}
-            svg={images === null ? <p>Cargando....</p> : images[8].url}
+            svg={<HomeSvg/>}
             description={"Inicio"}
           />
           <LinkNav
             onClick={setIsOpen}
             ulr={"/about"}
-            svg={images === null ? <p>Cargando....</p> : images[0].url}
+            svg={<AboutSvg/>}
             description={"Sobre mí"}
           />
           <LinkNav
             onClick={setIsOpen}
             ulr={"/projects"}
-            svg={images === null ? <p>Cargando....</p> : images[5].url}
+            svg={<ProjectSvg/>}
             description={"Proyectos"}
           />
           <LinkNav
             onClick={setIsOpen}
             ulr={"/certificates"}
-            svg={images === null ? <p>Cargando....</p> : images[1].url}
+            svg={<CertificateSvg/>}
             description={"Certificados"}
           />
-          <LinkNav
+          {/* <LinkNav
             onClick={setIsOpen}
             ulr={"/contact"}
-            svg={images === null ? <p>Cargando....</p> : images[2].url}
+            svg={<ContactSvg/>}
             description={"Contacto"}
-          />
+          /> */}
         </div>
       </div>
     </>

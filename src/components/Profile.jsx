@@ -2,8 +2,8 @@ import React from "react";
 
 import { SocialLink } from "./SocialLink";
 import { hookGetImages } from "../hooks/hookGetImages";
-import ImageProfile from "../../public/assets/imges/notfound.png";
-export const Profle = () => {
+import { FacebookSvg, WhatsAppSvg, LinkedinSvg, GitHubSvg } from "../svgs/svgs";
+export const Profile = () => {
   const { images } = hookGetImages("svg");
   return (
     <>
@@ -25,25 +25,24 @@ export const Profle = () => {
       <div className=" flex justify-around w-full xl:flex xl:w-full  xl:justify-between  md:flex md:w-full  md:justify-between ">
         <SocialLink
           alt={"Linkedin"}
-          svg={images === null ? <p>Cargando...</p> : images[9].url}
-          u
+          svg={<LinkedinSvg/>}
           url={
             "https://www.linkedin.com/in/jos%C3%A9-alejandro-cruz-p%C3%A9rez-34694123a"
           }
         />
         <SocialLink
           alt={"Git"}
-          svg={images === null ? <p>Cargando...</p> : images[4].url}
+          svg={<GitHubSvg />}
           url={"https://github.com/JoseAle19/"}
         />
         <SocialLink
           alt={"Facebook"}
-          svg={images === null ? <p>Cargando...</p> : images[3].url}
+          svg={<FacebookSvg />}
           url={"https://www.facebook.com/profile.php?id=100018178207573"}
         />
         <SocialLink
           alt={"WhatsApp"}
-          svg={images === null ? <p>Cargando...</p> : images[6].url}
+          svg={<WhatsAppSvg />}
           url={"https://wa.me/9631853517"}
         />
       </div>

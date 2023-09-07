@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { About, Certificates, Contact, Home, Projects } from "../pages";
 import { NotFound } from "../pages/NotFound";
 import { Nav } from "./Nav";
-import { Profle } from "./Profle";
+import { Profile } from "./Profile";
 
 export const SideBar = () => {
   const [isOpen, setisOpen] = useState(true);
@@ -12,7 +12,8 @@ export const SideBar = () => {
     const mediaQuery = window.matchMedia("(max-width: 425px)");
 
     const handleMediaQuery = (e) => {
-        setisOpen(!e.matches);
+      setIsPc(e.matches);
+      setisOpen(!e.matches);
     };
     mediaQuery.addEventListener("change", handleMediaQuery);
     handleMediaQuery(mediaQuery);
@@ -75,7 +76,7 @@ export const SideBar = () => {
             </svg>
           </p>
           <div className="w-full  h-1/4 p-5 flex flex-col justify-between">
-            <Profle />
+            <Profile />
           </div>
           <div className="w-3/4  ">
             <Nav
@@ -88,7 +89,7 @@ export const SideBar = () => {
               }
             />
           </div>
-          <p className="hidden md:block xl:block  text-center text-white text-sm  m-4">
+          <p className=" md:block xl:block  text-center text-white text-sm  m-4">
             © 2023 José Alejandro Cruz Pérez. Todos los derechos reservados.
           </p>
         </div>

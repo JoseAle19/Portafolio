@@ -11,7 +11,7 @@ export const LinkNav = ({ svg, ulr, description, onClick:closeSideBar}) => {
         className="flex gap-4 p-5 hover:text-white scale hover:scale-110  transition duration-300 "
         to={ulr}
       >
-        <img src={svg} alt={`Ir a ${description}`} />
+        {svg}
         <p className="font-bold text-gray-300 text-xl hover:text-white">
           {description}
         </p>

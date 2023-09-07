@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import GitSvg from "../../public/assets/svgs/git2.svg";
 import WebSvg from "../../public/assets/imges/web.png";
 import "animate.css";
-import { hookGetImages } from "../hooks/hookGetImages";
 import { urlFirebasePath } from "../utils/constantes/constantes";
+import { GitHubPerProject } from "../svgs/svgs";
+import { DiJavascript1, DiHtml5, DiCss3 } from "react-icons/di";
 // gif
 export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
   const [imgLoaded, setimgLoaded] = useState(false);
@@ -42,18 +42,27 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
             href={urlCodeProject}
           >
             Codigo
-            <img src={GitSvg} alt="" />
+            <GitHubPerProject />
           </a>
         </div>
       </div>
+
+      {/* Caja que se desplaza hacia abajo */}
       <div
         className={`drop-shadow-2xl 
-         w-full h-full transform absolute   rounded-xl ${
-           isStatic ? " translate-y-32" : "-translate-y-0"
-         } ${
+        w-full h-full transform absolute   rounded-xl ${
+          isStatic ? " translate-y-32" : "-translate-y-0"
+        } ${
           isStatic ? "transition duration-1000" : "transition duration-1000"
         }   `}
       >
+        <div className="flex justify-center bg-white">
+          <DiJavascript1 
+          className="bg-yellow-400"
+          size={30}  colorInterpolation="yellow" color="blac    k" />
+          <DiHtml5  size={30} color="red" />
+          <DiCss3  color="blue" size={30} />
+        </div>
         {!imgLoaded && (
           <div className="w-full h-full  bg-white flex justify-center items-center">
             <p className="animate-spin border border-y-black w-20 h-20  rounded-full"></p>
@@ -61,7 +70,7 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
         )}
         <img
           loading="lazy"
-          className=" rounded-xl object-cover w-full h-full animate__animated animate__slideInUp"
+          className="animate-fadeIn rounded-xl object-cover w-full h-full animate__animated animate__slideInUp"
           src={urlFirebasePath("imgs") + img}
           alt={imgTitle}
           onLoad={() => {

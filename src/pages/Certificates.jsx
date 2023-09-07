@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../animations/certificates.css";
 import { data } from "../mocks/certificates.json";
-import {  urlFirebasePath } from "../utils/constantes/constantes";
+import { urlFirebasePath } from "../utils/constantes/constantes";
 export const Certificates = () => {
   const [imgOnLoaded, setImgOnLoaded] = useState(false);
   const handleImageLoaded = () => {
@@ -16,16 +16,16 @@ export const Certificates = () => {
           return (
             <div
               key={url}
-              className="  hover:scale-105 duration-300 flex flex-col w-[300px] md:w-auto xl:w-[700px] border-4
+              className=" rounded-md   hover:scale-105 duration-500 flex flex-col w-[300px] md:w-auto xl:w-[700px] border-4
                border-blue-950 mt-5 bg-blue-950 "
             >
               <div>
                 <img
-                loading="lazy"
+                  loading="lazy"
                   onLoad={() => {
                     handleImageLoaded();
                   }}
-                  src={urlFirebasePath('certificates') + url}
+                  src={urlFirebasePath("certificates") + url}
                   alt={`Imagen ${name}`}
                   className="animate-fadeIn"
                 />
