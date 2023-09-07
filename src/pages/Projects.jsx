@@ -19,6 +19,7 @@ export const Projects = () => {
             return (
               <Project
                 key={project.img}
+                tecnologies = {project.tecnologies}
                 img={project.img}
                 imgTitle={project.imgTitle}
                 urlDemoProject={project.urlDemoProject}

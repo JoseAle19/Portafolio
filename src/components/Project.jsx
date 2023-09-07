@@ -4,9 +4,24 @@ import WebSvg from "../../public/assets/imges/web.png";
 import "animate.css";
 import { urlFirebasePath } from "../utils/constantes/constantes";
 import { GitHubPerProject } from "../svgs/svgs";
-import { DiJavascript1, DiHtml5, DiCss3 } from "react-icons/di";
+import {
+  DiJavascript1,
+  DiHtml5,
+  DiCss3,
+  DiReact,
+  DiBootstrap,
+  DiNodejsSmall,
+} from "react-icons/di";
+import { BiLogoTailwindCss, BiLogoRedux, BiLogoStripe } from "react-icons/bi";
+import { SiExpress } from "react-icons/si";
 // gif
-export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
+export const Project = ({
+  img,
+  imgTitle,
+  urlCodeProject,
+  urlDemoProject,
+  tecnologies,
+}) => {
   const [imgLoaded, setimgLoaded] = useState(false);
   const [isStatic, setisStatic] = useState(false);
 
@@ -22,7 +37,7 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
         setisStatic(false);
       }}
       className={`flex flex-wrap w-64 h-48 bg-white
-       rounded-xl  m-5 drop-shadow-2xl  mb-32 border-2 border-blue-950/20`}
+       rounded-xl  m-5 drop-shadow-2xl  mb-40 border-2 border-blue-950/20`}
     >
       <div className="flex flex-col w-full items-center">
         <span className="text-center text-xl p-2 font-bold">{imgTitle}</span>
@@ -56,13 +71,44 @@ export const Project = ({ img, imgTitle, urlCodeProject, urlDemoProject }) => {
           isStatic ? "transition duration-1000" : "transition duration-1000"
         }   `}
       >
-        {/* <div className="flex justify-center bg-white">
-          <DiJavascript1 
-          className="bg-yellow-400"
-          size={30}  colorInterpolation="yellow" color="blac    k" />
-          <DiHtml5  size={30} color="red" />
-          <DiCss3  color="blue" size={30} />
-        </div> */}
+        <div className="flex justify-center bg-white items-center p-1 rounded-full gap-2 ">
+          {tecnologies.map((tecnologie) => {
+            console.log(tecnologie);
+
+            return (
+              <div>
+                {tecnologie === "js" ? (
+                  <DiJavascript1
+                    className="bg-yellow-400 m-2"
+                    size={30}
+                    colorInterpolation="yellow"
+                    color="black"
+                  />
+                ) : tecnologie === "react" ? (
+                  <DiReact color="3AC4FF" size={30} />
+                ) : tecnologie === "html" ? (
+                  <DiHtml5 size={30} color="red" />
+                ) : tecnologie === "css" ? (
+                  <DiCss3 color="blue" size={30} />
+                ) : tecnologie === "tailwindcss" ? (
+                  <BiLogoTailwindCss color="3AC4FF" size={30} />
+                ) : tecnologie === "Bootstrap" ? (
+                  <DiBootstrap color="purple" size={30} />
+                ) : tecnologie === "node" ? (
+                  <DiNodejsSmall size={30} color="green" />
+                ) : tecnologie === "express" ? (
+                  <SiExpress size={30} />
+                ) : tecnologie === "stripe" ? (
+                  <BiLogoStripe size={30} color="blue" />
+                ) : tecnologie === "redux" ? (
+                  <BiLogoRedux size={30} color="purple" />
+                ) : (
+                  ""
+                )}{" "}
+              </div>
+            );
+          })}
+        </div>
         {!imgLoaded && (
           <div className="w-full h-full  bg-white flex justify-center items-center">
             <p className="animate-spin border border-y-black w-20 h-20  rounded-full"></p>
